@@ -5,3 +5,10 @@ spring:
     config:
       uri: http://localhost:8888
 
+---
+spring:
+  profiles: aws
+  cloud:
+    config:
+      uri: http://config.gr8conf.vpc:8888
+

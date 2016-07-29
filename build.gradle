@@ -29,8 +29,12 @@ repositories {
 	maven { url "https://repo.spring.io/milestone" }
 }
 
-
 dependencies {
+	compile('com.amazonaws:aws-java-sdk-core:1.11.21')
+	compile('com.amazonaws:aws-java-sdk-ec2:1.11.21')
+	compile('com.amazonaws:aws-java-sdk-route53:1.11.21')
+	compile('com.amazonaws:aws-java-sdk-sts:1.11.21')
+	compile('com.amazonaws:aws-java-sdk-autoscaling:1.11.21')
 	compile('org.springframework.cloud:spring-cloud-starter-config')
 	compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
 	compile('org.codehaus.groovy:groovy')
@@ -39,10 +43,9 @@ dependencies {
 
 dependencyManagement {
 	imports {
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.BUILD-SNAPSHOT"
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.SR4"
 	}
 }
-
 
 eclipse {
 	classpath {
